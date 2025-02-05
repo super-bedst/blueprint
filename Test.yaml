@@ -1,5 +1,5 @@
 blueprint:
-  name: "Bi-400 Blueprint"
+  name: "Pager tracking Person"
   description: "Tænder eller slukker for en input_boolean baseret på, om en device_tracker træder ind eller ud af en zone, og om en persons tilstand matcher en bestemt værdi."
   domain: automation
   input:
@@ -28,13 +28,13 @@ blueprint:
           domain: person
     target_state:
       name: "Måltilstand"
-      description: "Den tilstand, som person-entity'ens tilstand skal have for at booleanen skal tændes."
-      default: "Billund Brandstation"
+      description: "Navnet fra zonen FX Billund Brandstation"
+      default: "n"
       selector:
         text: {}
     toggle_boolean:
       name: "Toggle Boolean"
-      description: "Vælg den input_boolean, der skal tændes/slukkes."
+      description: "Vælg den Person hjælper som skal bruges."
       selector:
         entity:
           domain: input_boolean
